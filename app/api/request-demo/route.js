@@ -1,5 +1,3 @@
-import nodemailer from 'nodemailer';
-
 export async function POST(req) {
   const data = await req.formData();
   const name = data.get('name');
@@ -8,8 +6,10 @@ export async function POST(req) {
   const role = data.get('role');
   const message = data.get('message');
 
-  // Configure your SMTP transport
-  const transporter = nodemailer.createTransport({
+  // Dynamically import nodemailer to avoid build-time issues
+  const nodemailer = await import('nodemailer');
+
+  const transporter = nodemailer.default.createTransport({
     host: process.env.SMTP_HOST,
     port: Number(process.env.SMTP_PORT) || 587,
     secure: false,
