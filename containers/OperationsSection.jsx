@@ -37,7 +37,7 @@ const OperationsSection = () => {
             <h3 className="text-black font-semibold xl:text-2xl lg:text-xl  mb-1 xl:pt-10 lg:pt-5">
               Consumable and Capital resource management
             </h3>
-            <p className="text-gray-600 text-sm">
+            <p className="text-gray-600 text-sm md:text-base">
               Manage reusable assets and consumable materials with clear
               visibility across inventory and projects, ensuring accurate
               tracking and better control.
@@ -67,7 +67,7 @@ const OperationsSection = () => {
             <h3 className="text-black font-semibold xl:text-2xl lg:text-xl mb-1 xl:pt-10 lg:pt-5">
               Project Management
             </h3>
-            <p className="text-gray-600 text-sm">
+            <p className="text-gray-600 text-sm md:text-base">
               Plan and track active projects by monitoring assigned mechanics,
               resource usage, and overall project costs from start to
               completion.
@@ -92,7 +92,7 @@ const OperationsSection = () => {
             <h3 className="text-black font-semibold xl:text-2xl lg:text-xl mb-1 xl:pt-10 lg:pt-5">
               Supplier Management
             </h3>
-            <p className="text-gray-600 text-sm">
+            <p className="text-gray-600 text-sm md:text-base">
               Maintain a structured list of suppliers and link resources
               directly to them for improved traceability and smoother
               procurement processes.
@@ -122,7 +122,7 @@ const OperationsSection = () => {
             <h3 className="text-black font-semibold xl:text-2xl lg:text-xl mb-1 xl:pt-10 lg:pt-5">
               Intelligent Reporting
             </h3>
-            <p className="text-gray-600 text-sm">
+            <p className="text-gray-600 text-sm md:text-base">
               Generate meaningful reports on inventory movement, project costs,
               and resource utilization to support informed decision-making.
             </p>

@@ -7,60 +7,19 @@ import { ComponentProps } from "react";
 
 const testimonials = [
   {
-    id: 1,
-    name: "John Doe",
-    designation: "Software Engineer",
-    company: "TechCorp",
-    testimonial:
-      "This product has completely transformed the way we work. The efficiency and ease of use are unmatched!",
-    avatar: "https://randomuser.me/api/portraits/men/1.jpg",
+    text: "Tracking consumables and reusable assets separately has helped us plan better and avoid last-minute shortages. Operations feel far more controlled now.",
+    name: "Michael Thomas",
+    company: "SteelCore Manufacturing Services",
+    avatar: "/person_1.svg",
   },
   {
-    id: 2,
-    name: "Sophia Lee",
-    designation: "Data Analyst",
-    company: "InsightTech",
-    testimonial:
-      "This tool has saved me hours of work! The analytics and reporting features are incredibly powerful.",
-    avatar: "https://randomuser.me/api/portraits/women/6.jpg",
-  },
-  {
-    id: 3,
-    name: "Michael Johnson",
-    designation: "UX Designer",
-    company: "DesignPro",
-    testimonial:
-      "An amazing tool that simplifies complex tasks. Highly recommended for professionals in the industry.",
-    avatar: "https://randomuser.me/api/portraits/men/3.jpg",
-  },
-  {
-    id: 4,
-    name: "Emily Davis",
-    designation: "Marketing Specialist",
-    company: "BrandBoost",
-    testimonial:
-      "I've seen a significant improvement in our team's productivity since we started using this service.",
-    avatar: "https://randomuser.me/api/portraits/women/4.jpg",
-  },
-  {
-    id: 5,
-    name: "Daniel Martinez",
-    designation: "Full-Stack Developer",
-    company: "CodeCrafters",
-    testimonial:
-      "The best investment we've made! The support team is also super responsive and helpful.",
-    avatar: "https://randomuser.me/api/portraits/men/5.jpg",
-  },
-  {
-    id: 6,
-    name: "Jane Smith",
-    designation: "Product Manager",
-    company: "InnovateX",
-    testimonial:
-      "The user experience is top-notch! The interface is clean, intuitive, and easy to navigate.",
-    avatar: "https://randomuser.me/api/portraits/women/2.jpg",
+    text: "Dustack has finally given us visibility into how materials are used. We no longer depend on Excel to understand what’s happening inside projects.",
+    name: "Anita George",
+    company: "Torque Dynamics Industries",
+    avatar: "/person_2.svg",
   },
 ];
+
 
 const Testimonials = () => (
   <div className=" flex justify-center items-center md:py-20 py-10">
@@ -91,47 +50,51 @@ const Testimonials = () => (
   </div>
 );
 
-const TestimonialList = () =>
-  testimonials.map((testimonial) => (
-    <div
-      key={testimonial.id}
-      className="min-w-96 max-w-sm bg-accent rounded-xl p-6"
-    >
-      <div className="flex items-center justify-between">
-        <div className="flex items-center gap-3">
-          <Avatar className="size-10">
-            <AvatarFallback className="text-xl font-medium bg-primary text-primary-foreground">
-              {testimonial.name.charAt(0)}
-            </AvatarFallback>
-          </Avatar>
+const TestimonialList = () => (
+  <div className="flex gap-6">
+    {testimonials.map((t, i) => (
+      <div
+        key={i}
+        className={`rounded-md p-6 w-[400px] relative bg-gray-100`}
+      >
+        <div className="text-[#114366] mb-2">
+          <Image src="/coma.svg" alt="icon" width={20} height={20} />
+        </div>
+
+        <div className="flex items-center my-5">
+          {[...Array(5)].map((_, idx) => (
+            <svg
+              key={idx}
+              className="w-5 h-5 text-[#FFD600]"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path d="M10 15l-5.878 3.09 1.122-6.545L.488 6.91l6.561-.955L10 0l2.951 5.955 6.561.955-4.756 4.635 1.122 6.545z" />
+            </svg>
+          ))}
+        </div>
+
+        <p className="mb-4 text-[#01212F]">{t.text}</p>
+
+        <div className="flex items-center gap-3 mt-10">
+          <Image
+            src={t.avatar}
+            alt={t.name}
+            width={40}
+            height={40}
+            className="rounded-md"
+          />
           <div>
-            <p className="font-semibold">{testimonial.name}</p>
-            <p className="text-sm text-gray-500">{testimonial.designation}</p>
+            <div className="font-semibold text-[#01212F]">{t.name}</div>
+            <div className="text-xs text-[#4D595D]">{t.company}</div>
           </div>
         </div>
-        <Button variant="ghost" size="icon" asChild>
-          <Link href="#" target="_blank">
-            <TwitterLogo className="w-4 h-4" />
-          </Link>
-        </Button>
       </div>
-      <p className="mt-5 text-[17px]">{testimonial.testimonial}</p>
-    </div>
-  ));
-
-const TwitterLogo = (props: ComponentProps<"svg">) => (
-  <svg
-    role="img"
-    viewBox="0 0 24 24"
-    xmlns="http://www.w3.org/2000/svg"
-    {...props}
-  >
-    <title>X</title>
-    <path
-      fill="currentColor"
-      d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"
-    />
-  </svg>
+    ))}
+  </div>
 );
+
+
+
 
 export default Testimonials;

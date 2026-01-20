@@ -1,53 +1,78 @@
-import React from 'react'
-import { dashboard } from "@/public";
-import Image from 'next/image';
+"use client";
 
+import React from "react";
+import Image from "next/image";
+import { dashboard } from "@/public";
 
 const HeroSection = () => {
   return (
-    <section className="relative w-full  flex flex-col items-center justify-center bg-gradient-to-br from-[#e6f0ff] via-[#f7fafd] to-[#fffbe6] overflow-hidden padding-x">
-        <div className='mt-12'>
+    <section className="relative w-full overflow-hidden padding-x">
+      
+      {/* Background Gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#92D9FF] via-[#C5E2FF] via-[#FFEEB400] to-[#ffe28155]" />
 
-      <div className="relative z-20 flex flex-col items-center mt-20 mb-10 px-4 text-center max-w-3xl">
-        <span className="bg-[#A6F4C5] border flex justify-center items-center gap-2 border-green-700 rounded-full px-4 lg:py-2 py-1 text-[#1B2022] lg:text-[15px] md:text-sm text-xs  shadow-sm mb-4"> <Image src="/tick.svg" alt="icon" width={25} height={25}  /> Powering 100+ business worldwide</span>
-        <h1 className="text-4xl xl:text-6xl lg:text-5xl font-bold leading-tight mb-2">
-          Your <span className="text-blue-500">Digital Backbone</span> for<br />
-          Smarter Operations
+      {/* Decorative Vectors */}
+      <Image
+        src="/vector_1.svg"
+        alt="background curve"
+        width={600}
+        height={600}
+        className="absolute left-0 xl:bottom-0 md:-bottom-[150px] bottom-[-200px]  z-0"
+      />
+      <Image
+        src="/vector_1.svg"
+        alt="background curve"
+        width={400}
+        height={400}
+        className="absolute left-0 xl:bottom-0 z-0 md:-bottom-[100px] bottom-[-150px] "
+      />
+
+      <Image
+        src="/vector_2.svg"
+        alt="background curve"
+        width={700}
+        height={700}
+        className="absolute right-0 xl:bottom-0 z-0 md:-bottom-[80px] bottom-[-50px]"
+      />
+
+      {/* Content */}
+      <div className="relative z-10 flex flex-col items-center text-center max-w-4xl mx-auto pt-32 pb-16 px-4">
+        
+        {/* Badge */}
+        <span className="bg-[#A6F4C5] border border-green-700 rounded-full px-4 py-1 md:py-2 flex items-center gap-2 text-[#1B2022] text-xs md:text-sm shadow-sm mb-6">
+          <Image src="/tick.svg" alt="tick" width={18} height={18} />
+          Powering 100+ business worldwide
+        </span>
+
+        {/* Heading */}
+        <h1 className="text-4xl md:text-5xl  xl:text-6xl font-bold leading-tight mb-4 text-[#0B1C2D]">
+          Your <span className="text-primary">Digital Backbone</span> for&nbsp;
+          <br className=""/>
+           Smarter Operations
         </h1>
-        <p className="text-secondary text-lg xl:text-2xl lg:text-xl ">
-          A modern, AI-ready software suite designed to streamline operations for engineering and manufacturing teams of any size.
+
+        {/* Description */}
+        <p className="text-[#475569] text-base md:text-lg xl:text-xl max-w-3xl">
+          A modern, AI-ready software suite designed to streamline operations for
+          engineering and manufacturing teams of any size.
         </p>
-        <div className="flex  md:gap-4 gap-2 justify-center md:mt-12 mt-6">
-          <button className="bg-primary hover:bg-blue-600 text-white text-sm xl:text-2xl md:text-lg font-semibold px-6 py-3 rounded-lg shadow transition-all duration-300 cursor-pointer">
+
+        {/* Buttons */}
+        <div className="flex gap-2 md:gap-4 mt-8 md:mt-12">
+          <button className="bg-primary hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg shadow transition-all md:text-base text-sm">
             Request A Demo
           </button>
-          <button className="bg-white cursor-pointer text-secondary hover:bg-blue-50 text-sm xl:text-2xl md:text-lg font-semibold   px-6 py-3 rounded-lg shadow transition-all">
+
+          <button className="bg-white hover:bg-blue-50 text-[#0B1C2D] font-semibold px-6 py-3 rounded-lg shadow transition-all">
             Platform Overview
           </button>
         </div>
       </div>
-        </div>
-    
-      <div className="relative z-10 flex justify-center  lg:mt-16 md:mt-10 sm:mt-8 mt-6 ">
-        <div className='md:mb-[-60px] mb-[-10px]' >
-          <Image
-            src={dashboard}
-            alt="Dashboard Preview"
-            width={1200}
-            height={600}
-            className="w-175  rounded-2xl shadow-2xl border border-gray-200"
-            priority
-          />
-        </div>
-      </div>
-      <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
-        <svg className="absolute left-0 top-0 w-full h-full" width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="80%" cy="10%" r="180" fill="#e6f0ff" fillOpacity="0.3" />
-          <circle cx="10%" cy="90%" r="120" fill="#fffbe6" fillOpacity="0.3" />
-        </svg>
-      </div>
+
+      {/* Dashboard Image */}
+ <div className="relative z-10 flex justify-center lg:mt-16 md:mt-10 sm:mt-8 mt-6 "> <div className='md:mb-[-60px] mb-[-10px]' > <Image src={dashboard} alt="Dashboard Preview" width={1200} height={600} className="w-175 rounded-2xl shadow-2xl border border-gray-200" priority /> </div> </div>
     </section>
   );
-}
+};
 
-export default HeroSection
+export default HeroSection;
