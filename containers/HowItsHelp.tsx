@@ -20,16 +20,16 @@ const features = [
 
 export default function HowItsHelp() {
   return (
-    <section className="py-16 bg-white padding-x">
+    <section className="md:py-16 py-10 bg-white padding-x">
       <div className=" ">
-        <h2 className="text-5xl font-bold text-center mb-10">How It Helps?</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <h2 className="xl:text-5xl lg:text-4xl md:text-3xl text-2xl font-bold text-center mb-10">How It Helps?</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:gap-8 gap-4">
           {features.map((feature, idx) => (
-            <div key={idx} className="flex flex-col items-center text-center p-10 rounded-lg shadow hover:shadow-lg transition">
-              <div className="w-64 h-64 mb-4 relative">
+            <div key={idx} className="flex flex-col items-center text-center p-5 lg:p-10 rounded-lg shadow hover:shadow-lg transition">
+              <div className="lg:w-64 lg:h-64 w-40 h-40 mb-4 relative">
                 <Image src={feature.image} alt={feature.title} fill style={{objectFit:'contain'}} />
               </div>
-              <h3 className="text-2xl font-semibold mb-2">{feature.title}</h3>
+              <h3 className="xl:text-2xl md:text-xl font-semibold mb-2">{feature.title}</h3>
               <p className="text-gray-600">{feature.description}</p>
             </div>
           ))}

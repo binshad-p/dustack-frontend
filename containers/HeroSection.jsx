@@ -5,31 +5,31 @@ import Image from 'next/image';
 
 const HeroSection = () => {
   return (
-    <section className="relative w-full  flex flex-col items-center justify-center bg-gradient-to-br from-[#e6f0ff] via-[#f7fafd] to-[#fffbe6] overflow-hidden ">
+    <section className="relative w-full  flex flex-col items-center justify-center bg-gradient-to-br from-[#e6f0ff] via-[#f7fafd] to-[#fffbe6] overflow-hidden padding-x">
         <div className='mt-12'>
 
       <div className="relative z-20 flex flex-col items-center mt-20 mb-10 px-4 text-center max-w-3xl">
-        <span className="bg-[#A6F4C5] border flex justify-center items-center gap-2 border-green-700 rounded-full px-4 py-2 text-[#1B2022] text-[15px]   shadow-sm mb-4"> <Image src="/tick.svg" alt="icon" width={25} height={25}  /> Powering 100+ business worldwide</span>
-        <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-2">
+        <span className="bg-[#A6F4C5] border flex justify-center items-center gap-2 border-green-700 rounded-full px-4 lg:py-2 py-1 text-[#1B2022] lg:text-[15px] md:text-sm text-xs  shadow-sm mb-4"> <Image src="/tick.svg" alt="icon" width={25} height={25}  /> Powering 100+ business worldwide</span>
+        <h1 className="text-4xl xl:text-6xl lg:text-5xl font-bold leading-tight mb-2">
           Your <span className="text-blue-500">Digital Backbone</span> for<br />
           Smarter Operations
         </h1>
-        <p className="text-secondary text-lg md:text-2xl ">
+        <p className="text-secondary text-lg xl:text-2xl lg:text-xl ">
           A modern, AI-ready software suite designed to streamline operations for engineering and manufacturing teams of any size.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12">
-          <button className="bg-primary hover:bg-blue-600 text-white text-lg font-semibold px-6 py-3 rounded-lg shadow transition-all duration-300 cursor-pointer">
+        <div className="flex  md:gap-4 gap-2 justify-center md:mt-12 mt-6">
+          <button className="bg-primary hover:bg-blue-600 text-white text-sm xl:text-2xl md:text-lg font-semibold px-6 py-3 rounded-lg shadow transition-all duration-300 cursor-pointer">
             Request A Demo
           </button>
-          <button className="bg-white cursor-pointer text-secondary hover:bg-blue-50 text-lg font-semibold   px-6 py-3 rounded-lg shadow transition-all">
+          <button className="bg-white cursor-pointer text-secondary hover:bg-blue-50 text-sm xl:text-2xl md:text-lg font-semibold   px-6 py-3 rounded-lg shadow transition-all">
             Platform Overview
           </button>
         </div>
       </div>
         </div>
     
-      <div className="relative z-10 flex justify-center  mt-16">
-        <div style={{ marginBottom: '-60px' }}>
+      <div className="relative z-10 flex justify-center  lg:mt-16 md:mt-10 sm:mt-8 mt-6 ">
+        <div className='md:mb-[-60px] mb-[-10px]' >
           <Image
             src={dashboard}
             alt="Dashboard Preview"

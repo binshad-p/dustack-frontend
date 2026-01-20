@@ -63,7 +63,7 @@ const testimonials = [
 ];
 
 const Testimonials = () => (
-  <div className="min-h-screen flex justify-center items-center py-12">
+  <div className=" flex justify-center items-center md:py-20 py-10">
     <div className="h-full w-full ">
       <div className="flex justify-center items-center">
         <span className="bg-[#1B2022] flex items-center justify-center gap-2 text-center rounded-full py-2 px-4 text-[#fff] text-[15px] shadow-sm mb-4">
@@ -73,17 +73,17 @@ const Testimonials = () => (
         </span>
       </div>
 
-      <h2 className="text-5xl font-semibold text-center tracking-[-0.03em] px-6 text-pretty">
+      <h2 className="xl:text-5xl lg:text-4xl md:text-3xl text-2xl font-bold text-center tracking-[-0.03em] px-6 text-pretty">
         Hear From Our Happy Customers..!!
       </h2>
 
       <div className="mt-14 relative">
         <div className="z-10 absolute left-0 inset-y-0 w-[15%] bg-linear-to-r from-background to-transparent" />
         <div className="z-10 absolute right-0 inset-y-0 w-[15%] bg-linear-to-l from-background to-transparent" />
-        <Marquee pauseOnHover className="[--duration:20s]">
+        <Marquee pauseOnHover className="[--duration:60s]">
           <TestimonialList />
         </Marquee>
-        <Marquee pauseOnHover reverse className="mt-0 [--duration:20s]">
+        <Marquee pauseOnHover reverse className="mt-0 [--duration:60s]">
           <TestimonialList />
         </Marquee>
       </div>

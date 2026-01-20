@@ -3,20 +3,19 @@ import Image from "next/image";
 
 const OperationsSection = () => {
   return (
-    <section className="w-full padding-x py-20 bg-[#F7FAFC] flex flex-col items-center justify-center">
-      <h2 className="text-4xl md:text-5xl font-bold text-center mb-3 text-secondary md:leading-16">
+    <section className="w-full padding-x md:py-20 py-16 bg-[#F7FAFC] flex flex-col items-center justify-center">
+      <h2 className="xl:text-5xl lg:text-4xl md:text-3xl text-2xl font-bold text-center mb-3 text-secondary xl:leading-16 lg:leading-12">
         Everything You Need to Run
         <br />
         Smarter Operations
       </h2>
-      <p className="text-[#6A7A7F] text-2xl text-center mb-12 max-w-3xl">
+      <p className="text-[#6A7A7F] xl:xl:text-2xl lg:text-xl  text-center mb-12 max-w-3xl">
         Powerful features designed to help your team work smarter, not harder
       </p>
-      <div className="w-full  flex flex-col gap-8 mt-10">
-        <div className="flex flex-row gap-7 w-full">
+      <div className="w-full  flex flex-col xl:gap-8 gap-5 xl:mt-10 lg:mt-6">
+        <div className="flex md:flex-row flex-col xl:gap-7 gap-5  w-full">
           <div
-            className="bg-[#DEE2FF]    rounded-2xl  p-6 flex flex-col shadow-sm"
-            style={{ width: "60%" }}
+            className="bg-[#DEE2FF]    rounded-2xl  xl:p-6 md:p-4 p-5 flex flex-col shadow-sm md:w-[60%] w-full"
           >
             <div className="relative">
               <Image
@@ -27,7 +26,7 @@ const OperationsSection = () => {
                 className="w-full h-[300px] object-cover rounded-xl rounded-b-none  mb-4 object-left object-top"
               />
               <div
-                className="w-full h-[100px] absolute bottom-0 left-0 
+                className="w-full xl:h-[100px] md:h-[80px] h-[50px] absolute bottom-0 left-0 
   bg-gradient-to-t
   from-[#DEE2FF]
   via-[#DEE2FFC0]
@@ -35,7 +34,7 @@ const OperationsSection = () => {
   rounded-b-2xl"
               />
             </div>
-            <h3 className="text-black font-semibold text-2xl mb-1 pt-10">
+            <h3 className="text-black font-semibold xl:text-2xl lg:text-xl  mb-1 xl:pt-10 lg:pt-5">
               Consumable and Capital resource management
             </h3>
             <p className="text-gray-600 text-sm">
@@ -46,8 +45,7 @@ const OperationsSection = () => {
           </div>
 
           <div
-            className="bg-[#D0E5FE]  rounded-2xl p-6 flex flex-col shadow-sm"
-            style={{ width: "40%" }}
+            className="bg-[#D0E5FE]  rounded-2xl xl:p-6 md:p-4 p-5 flex flex-col shadow-sm md:w-[40%] w-full"
           >
             <div className="relative">
               <Image
@@ -58,7 +56,7 @@ const OperationsSection = () => {
                 className="w-full h-[300px] object-cover rounded-xl rounded-b-none mb-4 object-left object-top"
               />
               <div
-                className="w-full h-[100px] absolute bottom-0 left-0 
+                className="w-full xl:h-[100px] md:h-[80px] h-[50px] absolute bottom-0 left-0 
   bg-gradient-to-t 
   from-[#D0E5FE] 
   via-[#d4e3f8e0] 
@@ -66,7 +64,7 @@ const OperationsSection = () => {
   rounded-b-2xl"
               />
             </div>
-            <h3 className="text-black font-semibold text-2xl mb-1 pt-10">
+            <h3 className="text-black font-semibold xl:text-2xl lg:text-xl mb-1 xl:pt-10 lg:pt-5">
               Project Management
             </h3>
             <p className="text-gray-600 text-sm">
@@ -77,10 +75,9 @@ const OperationsSection = () => {
           </div>
         </div>
 
-        <div className="flex flex-row gap-7 w-full">
+        <div className="flex md:flex-row flex-col xl:gap-7 gap-5 w-full">
           <div
-            className="bg-[#FEF2D0]  rounded-2xl p-6 flex flex-col shadow-sm"
-            style={{ width: "40%" }}
+            className="bg-[#FEF2D0]  rounded-2xl xl:p-6 md:p-4 p-5 flex flex-col shadow-sm md:w-[40%] w-full"
           >
             <div className="relative">
               <Image
@@ -90,9 +87,9 @@ const OperationsSection = () => {
                 height={300}
                 className="w-full h-[300px] object-cover rounded-xl rounded-b-none mb-4 object-left object-top"
               />
-              <div className="w-full h-[100px] absolute bottom-0 left-0 bg-gradient-to-t from-[#FEF2D0] via-[#FEF2D0C0] to-[#f7fafc44] rounded-b-2xl" />
+              <div className="w-full xl:h-[100px] md:h-[80px] h-[50px] absolute bottom-0 left-0 bg-gradient-to-t from-[#FEF2D0] via-[#FEF2D0C0] to-[#f7fafc44] rounded-b-2xl" />
             </div>
-            <h3 className="text-black font-semibold text-2xl mb-1 pt-10">
+            <h3 className="text-black font-semibold xl:text-2xl lg:text-xl mb-1 xl:pt-10 lg:pt-5">
               Supplier Management
             </h3>
             <p className="text-gray-600 text-sm">
@@ -103,8 +100,7 @@ const OperationsSection = () => {
           </div>
 
           <div
-            className="bg-[#D8FFDE]  rounded-2xl p-6 flex flex-col shadow-sm"
-            style={{ width: "60%" }}
+            className="bg-[#D8FFDE]  rounded-2xl xl:p-6 md:p-4 p-5 flex flex-col shadow-sm md:w-[60%] w-full"
           >
             <div className="relative">
               <Image
@@ -115,7 +111,7 @@ const OperationsSection = () => {
                 className="w-full h-[300px] object-cover rounded-xl rounded-b-none mb-4 object-left object-top"
               />
               <div
-                className="w-full h-[100px] absolute bottom-0 left-0
+                className="w-full xl:h-[100px] md:h-[80px] h-[50px] absolute bottom-0 left-0
             bg-gradient-to-t
   from-[#D8FFDE]
   via-[#D8FFDEC0]
@@ -123,7 +119,7 @@ const OperationsSection = () => {
   rounded-b-2xl"
               />
             </div>
-            <h3 className="text-black font-semibold text-2xl mb-1 pt-10">
+            <h3 className="text-black font-semibold xl:text-2xl lg:text-xl mb-1 xl:pt-10 lg:pt-5">
               Intelligent Reporting
             </h3>
             <p className="text-gray-600 text-sm">

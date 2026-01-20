@@ -52,14 +52,14 @@ export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="bg-[#f7fafd] py-16 padding-x">
-      <div className="mx-auto grid md:grid-cols-3 gap-10 items-center">
+    <section className="bg-[#f7fafd] md:py-16 py-10 padding-x">
+      <div className="mx-auto flex flex-col md:flex-row lg:gap-10 gap-5 lg:items-center md:items-start">
         {/* FAQ LIST */}
-        <div className="md:col-span-2">
-          <h2 className="text-5xl font-bold mb-2">
+        <div className=" lg:w-[70%] md:w-[60%] w-full">
+          <h2 className="xl:text-5xl lg:text-4xl md:text-3xl text-2xl font-bold mb-2 text-center md:text-left">
             Frequently Asked <span className="text-primary">Questions</span>
           </h2>
-          <p className="text-[#4D595D] mb-8 text-xl">
+          <p className="text-[#4D595D] mb-8 xl:text-xl text-lg">
             Everything you need to know about Dustack
           </p>
 
@@ -75,7 +75,7 @@ export default function FAQSection() {
                     setOpenIndex(openIndex === idx ? null : idx)
                   }
                 >
-                  <span className="font-medium text-xl">
+                  <span className="font-medium lg:text-xl text-lg">
                     {faq.question}
                   </span>
 
@@ -107,8 +107,8 @@ export default function FAQSection() {
         </div>
 
         {/* SUPPORT CARD */}
-        <div className="bg-linear-to-br from-[#01212F] to-[#5479F7] rounded-xl p-10 text-white shadow-lg">
-          <h3 className="text-2xl font-semibold mb-2">
+        <div className="bg-linear-to-br from-[#01212F] to-[#5479F7] rounded-xl xl:p-10 p-5 text-white shadow-lg lg:w-[30%] md:w-[40%] w-full">
+          <h3 className="xl:text-2xl lg:text-xl font-semibold mb-2">
             Still have questions?
           </h3>
           <p className="mb-6 text-sm opacity-90">
@@ -119,7 +119,7 @@ export default function FAQSection() {
           <div className="space-y-5 mb-6">
             {supportOptions.map((option, idx) => (
               <div key={idx} className="flex items-center gap-4">
-                <div className="w-16 h-16 bg-[#FFFFFF33] p-4 rounded-md flex items-center justify-center">
+                <div className="lg:w-16 lg:h-16 w-10 h-10 bg-[#FFFFFF33] lg:p-4 p-2 rounded-md flex items-center justify-center">
                   <Image
                     src={option.icon}
                     alt={option.label}
@@ -128,7 +128,7 @@ export default function FAQSection() {
                   />
                 </div>
                 <div>
-                  <div className="text-xl">{option.label}</div>
+                  <div className="lg:text-xl text-base">{option.label}</div>
                   <div className="  opacity-80">
                     {option.desc}
                   </div>

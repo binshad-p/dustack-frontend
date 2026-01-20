@@ -31,7 +31,7 @@ export default function Footer() {
           </ul>
         </div>
         <div className="flex flex-col items-center md:items-start col-span-2">
-          <Image src="/logo_white.svg" alt="Dustack Logo" width={120} height={40} className="mb-14" />
+          <Image src="/logo_white.svg" alt="Dustack Logo" width={120} height={40} className="lg:mb-14 mb-6" />
           <div className="bg-[#003049] rounded-lg p-4 w-full ">
             <h5 className="font-semibold mb-4 text-2xl">Dustack Pvt Ltd.</h5>
             <p className="text-sm text-[#A3B3BC]">A modern operational software platform built for engineering and manufacturing teams to manage projects, inventory, and resources with clarity and control.</p>

@@ -12,13 +12,13 @@ const companies = [
 
 const CompaniesSection = () => {
   return (
-    <section className="w-full py-20 bg-white flex flex-col items-center justify-center">
-      <h2 className="text-[48px] font-bold text-center mb-8">
+    <section className="w-full md:py-20 py-16 bg-white flex flex-col items-center justify-center padding-x">
+      <h2 className="xl:text-5xl lg:text-4xl md:text-3xl text-2xl   font-bold text-center mb-8">
         <span className="text-secondary">Trusted by more than<br /> <span className="text-primary">100+ companies</span> around the world</span>
       </h2>
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-10 justify-items-center items-center w-full max-w-5xl mx-auto">
+      <div className="flex flex-wrap justify-center items-center md:gap-10 gap-5 w-full  mx-auto">
         {companies.map((company, idx) => (
-          <div key={idx} className="flex items-center justify-center w-full" style={{ maxWidth: "180px" }}>
+          <div key={idx} className="flex items-center justify-center xl:max-w-[170px] max-w-[150px] " >
             <Image
               src={company.src}
               alt={company.alt}
